@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _5.Character_Statc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+
+            int currentHP = int.Parse(Console.ReadLine());
+            int maxHP = int.Parse(Console.ReadLine());
+            int currentMANA = int.Parse(Console.ReadLine());
+            int maxMANA = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine($"Name: {name}");
+            Console.Write($"Health: ");
+            Console.Write(new string('|', currentHP+1));
+            Console.Write(new string('.', maxHP - currentHP));
+            Console.WriteLine("|");
+            Console.Write($"Energy: ");
+            Console.Write(new string('|', currentMANA+1));
+            Console.Write(new string('.', maxMANA - currentMANA));
+            Console.WriteLine("|");
+        }
+    }
+}
