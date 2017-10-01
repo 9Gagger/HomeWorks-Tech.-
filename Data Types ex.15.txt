@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _15.Fast_Prime_Cheker_Refactor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int input = int.Parse(Console.ReadLine());
+            for (int checking = 0; checking <= input; checking++)
+            {
+                bool statusAfterCheck = true;
+                for (int OptimusPrime = 2; OptimusPrime <= Math.Sqrt(checking); OptimusPrime++)
+                {
+                    if (checking % OptimusPrime == 0)
+                    {
+                        statusAfterCheck = false;
+                        break;
+                    }
+                }
+                if (checking == 0 || checking == 1)
+                   continue;
+                else Console.WriteLine($"{checking} -> {statusAfterCheck}");
+            }
+        }
+    }
+}
